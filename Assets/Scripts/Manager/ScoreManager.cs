@@ -37,8 +37,7 @@ public class ScoreManager : MonoBehaviour
         if (Score < 1)
         {
             Szeneloader.Instance.LoadScene(Szeneloader.GetNextScene());
-
-            youwin.RaiseEvent();
+           
         }
         
     }
