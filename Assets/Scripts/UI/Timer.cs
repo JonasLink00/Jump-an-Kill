@@ -9,15 +9,18 @@ public class Timer : MonoBehaviour
     [SerializeField] float remainingTime;
     [SerializeField] private ScriptableEvent timeisup;
 
+    public static bool timerisstoped = false;
     private void Update()
     {
-       
-        if (remainingTime > 0)
+        
+
+
+        if (remainingTime > 0 && !timerisstoped)
         {
             remainingTime -= Time.deltaTime;
            
         }
-        else
+        else if (remainingTime < 0 && timerisstoped)
         {
             remainingTime = 0;
             timeisup.RaiseEvent();

@@ -1799,8 +1799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42749cb70ef784b4e8fab26d1b4341f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnenmiestoKill: 10
-  winningCondition: 0
   GameisPaused: 0
 --- !u!4 &2004294799
 Transform:

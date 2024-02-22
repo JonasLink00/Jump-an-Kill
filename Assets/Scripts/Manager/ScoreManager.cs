@@ -22,6 +22,18 @@ public class ScoreManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            transition.SetBool("Tutorial", true);
+        }
+        else
+        {
+            Timer.timerisstoped = false;
+            transition.SetBool("Tutorial", false);
+            
+        }
+
     }
     void Start()
     {
@@ -48,10 +60,12 @@ public class ScoreManager : MonoBehaviour
     //Tiggerd beim Aufrufen die Transition + neue Scene
     IEnumerator LoadTransition()
     {
+        Timer.timerisstoped = true;
         transition.SetTrigger("Start");
-
+        
+        
         yield return new WaitForSeconds(transitionTimer);
-
+        
         Szeneloader.Instance.LoadScene(Szeneloader.GetNextScene());
 
     }
