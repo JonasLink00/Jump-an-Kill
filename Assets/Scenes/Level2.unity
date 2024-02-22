@@ -328,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5220691128028451707, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: remainingTime
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3301,7 +3301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2913206773417428932, guid: 6242a3a626c8dd1478f8c5a6887b8d11, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5668713142361999854, guid: 6242a3a626c8dd1478f8c5a6887b8d11, type: 3}
       propertyPath: m_LocalPosition.x

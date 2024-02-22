@@ -12,6 +12,7 @@ public class SettingsManager : MonoBehaviour
     public Slider AudioSlider;
     public void SetVolume(float volume)
     {
+        // Setzt das Volumen des AudioMixers
         AudioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
         // AudioMixer.SetFloat("Volume", volume);
     }

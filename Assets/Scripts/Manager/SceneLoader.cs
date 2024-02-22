@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public enum SceneIndicies
 {
+    //Alle Scenen sind in der selben reihnfolge wie in Build Settings
    MainMenu,
    Tutorial,
    Level1,
@@ -24,6 +25,7 @@ public class Szeneloader : MonoBehaviour
 
     private void Awake()
     {
+        //Verhindert, dass zwei Szeneloader in einer Scene existieren 
         if (Instance == null && Instance != this)
         {
             Instance = this;
@@ -40,17 +42,20 @@ public class Szeneloader : MonoBehaviour
         LoadScene(startScene);
     }
 
+    //Läd Scenen mit Hilfe des Indicies
     public void LoadScene(SceneIndicies _indicies, LoadSceneMode _mode = LoadSceneMode.Single)
     {
         SceneManager.LoadScene((int)_indicies, _mode);
 
     }
 
+    //Unläd Scenen mit Hilfe des Indicies
     public void UnLoadScene(SceneIndicies _indicies)
     {
         SceneManager.UnloadSceneAsync((int)_indicies);
     }
 
+    //Läd die Scenen die im Enum nach der Aktuellen kommt 
     public static SceneIndicies GetNextScene()
     {
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;

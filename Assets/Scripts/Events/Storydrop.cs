@@ -11,6 +11,7 @@ public class Storydrop : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //Aktiviert Event bei kontakt mit Player
         if (other.GetComponent<Rigidbody2D>() != null)
         {
             InfoEvent2.RaiseEvent();
@@ -18,6 +19,7 @@ public class Storydrop : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
+        //Deaktiviert Event bei kontakt mit Player
         if (other.GetComponent<Rigidbody2D>() != null)
         {
             EndInfoEvent2.RaiseEvent();

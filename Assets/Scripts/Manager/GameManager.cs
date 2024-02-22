@@ -6,10 +6,7 @@ public class GameManager : MonoBehaviour
 {
    public static GameManager Instance;
 
-   [SerializeField] private float EnenmiestoKill = 10f;
-   [SerializeField] private float winningCondition = 0f;
-   public bool GameisPaused = false;
-
+   
 
     private void Awake()
     {

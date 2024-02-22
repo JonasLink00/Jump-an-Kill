@@ -5,16 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
 {
+    //Event bei ablauf der Zeit
     public void TimeisUpEvent()
     {
         Szeneloader.Instance.LoadScene(SceneIndicies.GameOver);
     }
-    public void LevelCompleteEvent()
-    {
-        Szeneloader.Instance.LoadScene(SceneIndicies.Level1);
-    }
-    public void YouWinEvent()
-    {
-        Szeneloader.Instance.LoadScene(SceneIndicies.Win);
-    }
+    
 }
