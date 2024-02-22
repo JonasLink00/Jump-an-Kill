@@ -169,9 +169,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2405753028253055858}
   - {fileID: 8576279540767955459}
   - {fileID: 6133731145912002699}
+  - {fileID: 2405753028253055858}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -257,6 +257,7 @@ MonoBehaviour:
   ScoreText: {fileID: 827724249619043647}
   Score: 10
   transition: {fileID: 5924914538894206362}
+  transitionTimer: 1
 --- !u!1 &5537973646894098395
 GameObject:
   m_ObjectHideFlags: 0
