@@ -18,6 +18,7 @@ public class PlayerMovment : MonoBehaviour
     public int maxJumps = 2;
     int jumpsRemaning;
     bool isJumping = false;
+    AudioSource jumpSound;
 
     [Header("GroundCheck")]
     public Transform groundCheckPos;
@@ -42,6 +43,7 @@ public class PlayerMovment : MonoBehaviour
         _sprite = GetComponent<SpriteRenderer>();
         jumpsRemaning = maxJumps;
         rb = GetComponent<Rigidbody2D>();
+        jumpSound = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
@@ -95,18 +97,22 @@ public class PlayerMovment : MonoBehaviour
         {
             isJumping = true;
 
+            
+
             //Performed = Komplet gedrückt = 1 Jump
             if (context.performed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpPower);
                 jumpsRemaning--;
-                
+                jumpSound.Play();
+
             }
             //Canceld = nicht Komplet gedrückt = 0,5 Jump
             else if (context.canceled)
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
                 jumpsRemaning--;
+                
             }
 
 

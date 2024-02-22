@@ -16,8 +16,14 @@ public class EnemyBehaviorRight : MonoBehaviour
     private float Speed = 2f;
 
     [SerializeField]
-    int destoryTime = 5;
+    int destoryTime = 6;
 
+    AudioSource DestroyEnemySound;
+
+    private void Start()
+    {
+        DestroyEnemySound = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         EnemyCheck();
@@ -39,9 +45,10 @@ public class EnemyBehaviorRight : MonoBehaviour
         {
             StopCoroutine(DestroyEnemy());
             StartCoroutine(DestroyEnemy());
+            DestroyEnemySound.Play();
         }
 
-        
+
     }
 
     //Entfernt GameObjekt

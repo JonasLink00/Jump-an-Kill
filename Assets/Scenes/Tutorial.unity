@@ -745,6 +745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3955282867093080802, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4837113730870627411, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -2663,6 +2667,10 @@ PrefabInstance:
       propertyPath: destoryTime
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 9162605613506639202, guid: 371c4508cf7f3e2459e9b5d831376bb7, type: 3}
+      propertyPath: BypassReverbZones
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2785,8 +2793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42749cb70ef784b4e8fab26d1b4341f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnenmiestoKill: 10
-  winningCondition: 0
   GameisPaused: 0
 --- !u!4 &2004294799
 Transform:
@@ -3679,7 +3685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2913206773417428932, guid: 6242a3a626c8dd1478f8c5a6887b8d11, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5668713142361999854, guid: 6242a3a626c8dd1478f8c5a6887b8d11, type: 3}
       propertyPath: m_LocalPosition.x
