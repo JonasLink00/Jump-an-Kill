@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Tafel
+  - name: Background
     uniqueID: 3606200387
+    locked: 0
+  - name: Mainground
+    uniqueID: 2652038125
     locked: 0

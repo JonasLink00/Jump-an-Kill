@@ -26,7 +26,7 @@ public class EnemyBehaviorRight : MonoBehaviour
     }
     private void Update()
     {
-        EnemyCheck();
+        
         EnemyMovement();
         Destroy(gameObject, destoryTime);
     }
@@ -38,18 +38,18 @@ public class EnemyBehaviorRight : MonoBehaviour
         transform.position += Vector3.right * Time.deltaTime *Speed;
     }
 
-    //Checkt ob das Objekt des Spieler berührt
-    private void EnemyCheck()
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (Physics2D.OverlapBox(enemyCheckPos.position, enemyCheckSize, 0, enemyLayer))
+        
+        if (other.GetComponent<Rigidbody2D>() != null )
         {
             StopCoroutine(DestroyEnemy());
             StartCoroutine(DestroyEnemy());
             DestroyEnemySound.Play();
         }
-
-
     }
+  
 
     //Entfernt GameObjekt
     IEnumerator DestroyEnemy()
@@ -57,7 +57,7 @@ public class EnemyBehaviorRight : MonoBehaviour
         Debug.Log("EnemyFound");
         yield return new WaitForSeconds(0.2f);
         ScoreManager.instance.AddPoint();
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 
     //Zeichnet HitBock 

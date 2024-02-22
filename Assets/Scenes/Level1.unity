@@ -328,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3955282867093080802, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5220691128028451707, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: remainingTime
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 605831870}
   - component: {fileID: 605831869}
   - component: {fileID: 605831868}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

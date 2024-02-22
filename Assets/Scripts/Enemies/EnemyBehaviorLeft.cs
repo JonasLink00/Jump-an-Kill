@@ -58,7 +58,7 @@ public class EnemyBehaviorLeft : MonoBehaviour
         Debug.Log("EnemyFound");
         yield return new WaitForSeconds(0.2f);
         ScoreManager.instance.AddPoint();
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 
     //Zeichnet HitBock 
