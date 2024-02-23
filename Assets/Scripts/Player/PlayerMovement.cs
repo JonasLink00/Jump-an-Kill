@@ -19,6 +19,8 @@ public class PlayerMovment : MonoBehaviour
     int jumpsRemaning;
     bool isJumping = false;
     AudioSource jumpSound;
+    [SerializeField]
+    private ParticleSystem JumpDust;
 
     [Header("GroundCheck")]
     public Transform groundCheckPos;
@@ -105,6 +107,7 @@ public class PlayerMovment : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpPower);
                 jumpsRemaning--;
                 jumpSound.Play();
+                JumpDust.Play();
 
             }
             //Canceld = nicht Komplet gedrückt = 0,5 Jump

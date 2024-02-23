@@ -20,13 +20,15 @@ public class EnemyBehaviorLeft : MonoBehaviour
 
     AudioSource DestroyEnemySound;
 
+    [SerializeField]
+    private ParticleSystem EnemyExplosion;
     private void Start()
     {
         DestroyEnemySound = GetComponent<AudioSource>();
     }
     private void Update()
     {
-        EnemyCheck();
+        
         EnemyMovement();
         Destroy(gameObject, destoryTime);
 
@@ -40,16 +42,16 @@ public class EnemyBehaviorLeft : MonoBehaviour
     }
 
     //Checkt ob das Objekt des Spieler berührt
-    private void EnemyCheck()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (Physics2D.OverlapBox(enemyCheckPos.position, enemyCheckSize, 0, enemyLayer))
+
+        if (other.GetComponent<Rigidbody2D>() != null)
         {
             StopCoroutine(DestroyEnemy());
             StartCoroutine(DestroyEnemy());
+            EnemyExplosion.Play();
             DestroyEnemySound.Play();
         }
-
-
     }
 
     //Entfernt GameObjekt nach 2 millisekunden 

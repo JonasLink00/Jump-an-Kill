@@ -20,6 +20,9 @@ public class EnemyBehaviorRight : MonoBehaviour
 
     AudioSource DestroyEnemySound;
 
+    [SerializeField]
+    private ParticleSystem EnemyExplosion;
+
     private void Start()
     {
         DestroyEnemySound = GetComponent<AudioSource>();
@@ -46,6 +49,7 @@ public class EnemyBehaviorRight : MonoBehaviour
         {
             StopCoroutine(DestroyEnemy());
             StartCoroutine(DestroyEnemy());
+            EnemyExplosion.Play();
             DestroyEnemySound.Play();
         }
     }
