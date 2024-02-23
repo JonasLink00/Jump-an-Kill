@@ -323,6 +323,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5220691128028451707, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: remainingTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307305545723153730, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: Score
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

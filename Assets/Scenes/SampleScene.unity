@@ -3287,7 +3287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6133731145912002699, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -210
+      value: -71
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133731145912002699, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -51
       objectReference: {fileID: 0}
     - target: {fileID: 7307305545723153730, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: Score
