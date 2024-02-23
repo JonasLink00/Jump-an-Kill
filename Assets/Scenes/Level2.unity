@@ -322,6 +322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3588943187376575689, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3955282867093080802, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: m_Name
       value: GameUI
@@ -401,7 +405,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.167524
+  orthographic size: 8.97
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
