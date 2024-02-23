@@ -58,7 +58,6 @@ public class EnemyBehaviorRight : MonoBehaviour
     //Entfernt GameObjekt
     IEnumerator DestroyEnemy()
     {
-        Debug.Log("EnemyFound");
         yield return new WaitForSeconds(0.2f);
         ScoreManager.instance.AddPoint();
         Destroy(gameObject);

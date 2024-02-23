@@ -12,15 +12,13 @@ public class Timer : MonoBehaviour
     public static bool timerisstoped = false;
     private void Update()
     {
-        
-
 
         if (remainingTime > 0 && !timerisstoped)
         {
             remainingTime -= Time.deltaTime;
            
         }
-        else if (remainingTime < 0 && timerisstoped)
+        else if (remainingTime < 0)
         {
             remainingTime = 0;
             timeisup.RaiseEvent();

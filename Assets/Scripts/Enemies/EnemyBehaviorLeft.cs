@@ -57,7 +57,6 @@ public class EnemyBehaviorLeft : MonoBehaviour
     //Entfernt GameObjekt nach 2 millisekunden 
     IEnumerator DestroyEnemy()
     {
-        Debug.Log("EnemyFound");
         yield return new WaitForSeconds(0.2f);
         ScoreManager.instance.AddPoint();
         Destroy(gameObject);

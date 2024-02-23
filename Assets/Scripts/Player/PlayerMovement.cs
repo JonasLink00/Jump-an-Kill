@@ -50,7 +50,7 @@ public class PlayerMovment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(isJumping);
+        
         rb.velocity = new Vector2(horizontalMovement * PlayerSpeed, rb.velocity.y);
         GroundCheck();
         Gravity();
@@ -63,7 +63,6 @@ public class PlayerMovment : MonoBehaviour
 
         if(context.canceled)
         {
-            Debug.Log("cancled");
             _animator.SetBool("walking", false);
         }
         else
@@ -144,7 +143,6 @@ public class PlayerMovment : MonoBehaviour
 
             _animator.SetBool("jumping", true);
             _sprite.color = Color.red;
-            Debug.Log("Jumpani");
             //Verändert das Layer
             int AttackLayer = LayerMask.NameToLayer("Attack");
             gameObject.layer = AttackLayer;
