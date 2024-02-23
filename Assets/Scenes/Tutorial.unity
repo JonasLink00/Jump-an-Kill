@@ -767,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5220691128028451707, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: remainingTime
-      value: 300
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6133731145912002699, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2592,7 +2592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1162380150240575132, guid: 371c4508cf7f3e2459e9b5d831376bb7, type: 3}
       propertyPath: startDelay.scalar
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1162380150240575132, guid: 371c4508cf7f3e2459e9b5d831376bb7, type: 3}
       propertyPath: InitialModule.startSpeed.scalar

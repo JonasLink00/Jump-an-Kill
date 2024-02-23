@@ -330,6 +330,10 @@ PrefabInstance:
       propertyPath: remainingTime
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 7307305545723153730, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: Score
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1961,8 +1965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42749cb70ef784b4e8fab26d1b4341f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnenmiestoKill: 10
-  winningCondition: 0
   GameisPaused: 0
 --- !u!4 &2004294799
 Transform:
