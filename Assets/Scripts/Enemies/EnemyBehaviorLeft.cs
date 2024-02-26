@@ -11,6 +11,8 @@ public class EnemyBehaviorLeft : MonoBehaviour
     public Vector2 enemyCheckSize = new Vector2(0.5f, 0.05f);
     public LayerMask enemyLayer;
 
+   
+    public PlayerMovment Player;
 
     [SerializeField]
     private float Speed = 2f;
@@ -24,6 +26,7 @@ public class EnemyBehaviorLeft : MonoBehaviour
     private ParticleSystem EnemyExplosion;
     private void Start()
     {
+        Player = FindObjectOfType<PlayerMovment>();
         DestroyEnemySound = GetComponent<AudioSource>();
     }
     private void Update()
@@ -45,7 +48,7 @@ public class EnemyBehaviorLeft : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.GetComponent<Rigidbody2D>() != null)
+        if (other.GetComponent<Rigidbody2D>() != null && Player.isJumping)
         {
             StopCoroutine(DestroyEnemy());
             StartCoroutine(DestroyEnemy());

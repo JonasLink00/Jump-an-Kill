@@ -17,7 +17,7 @@ public class PlayerMovment : MonoBehaviour
     public float jumpPower = 10f;
     public int maxJumps = 2;
     int jumpsRemaning;
-    bool isJumping = false;
+    public bool isJumping = false;
     AudioSource jumpSound;
     [SerializeField]
     private ParticleSystem JumpDust;
