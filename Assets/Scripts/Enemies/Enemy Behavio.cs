@@ -4,15 +4,15 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class EnemyBehaviorRight : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
     [Header("EnemyCheck")]
     public Transform enemyCheckPos;
     public Vector2 enemyCheckSize = new Vector2(0.5f, 0.05f);
-    public LayerMask enemyLayer;
 
     public PlayerMovment Player;
 
+    public bool moveright = true;
     [SerializeField]
     private float Speed = 2f;
 
@@ -26,6 +26,7 @@ public class EnemyBehaviorRight : MonoBehaviour
 
     private void Start()
     {
+        Player = FindObjectOfType<PlayerMovment>();
         DestroyEnemySound = GetComponent<AudioSource>();
     }
     private void Update()
@@ -39,7 +40,14 @@ public class EnemyBehaviorRight : MonoBehaviour
 
     private void EnemyMovement()
     {
-        transform.position += Vector3.right * Time.deltaTime *Speed;
+        if(moveright)
+        {
+            transform.position += Vector3.right * Time.deltaTime * Speed;
+        }
+        else
+        {
+            transform.position += Vector3.left * Time.deltaTime * Speed;
+        }
     }
 
 

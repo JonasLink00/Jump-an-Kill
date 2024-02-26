@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 9097097790475030783}
   - component: {fileID: 2089500919691376850}
   - component: {fileID: -5255954624373885263}
-  - component: {fileID: 659176895880475287}
   - component: {fileID: 627134510925854850}
+  - component: {fileID: 6035993802411850746}
   m_Layer: 7
   m_Name: Enemy Left
   m_TagString: Untagged
@@ -179,26 +179,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.71}
   m_EdgeRadius: 0
---- !u!114 &659176895880475287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2947781293231480152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 441aaa32243810e4ea89f4cab8ad72ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyCheckPos: {fileID: 8737741981230318629}
-  enemyCheckSize: {x: 1, y: 0.71}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  Speed: 5
-  destoryTime: 6
-  EnemyExplosion: {fileID: 7165756890599477118}
 --- !u!82 &627134510925854850
 AudioSource:
   m_ObjectHideFlags: 0
@@ -221,7 +201,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.614
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -295,6 +275,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6035993802411850746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947781293231480152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe2c238e1db6404ba47b1df00f47d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCheckPos: {fileID: 8737741981230318629}
+  enemyCheckSize: {x: 0.5, y: 0.05}
+  Player: {fileID: 0}
+  moveright: 0
+  Speed: 5
+  destoryTime: 6
+  EnemyExplosion: {fileID: 7165756890599477118}
 --- !u!1 &8082383189316208554
 GameObject:
   m_ObjectHideFlags: 0
