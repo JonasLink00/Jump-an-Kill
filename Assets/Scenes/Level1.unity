@@ -239,6 +239,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 756876776627193158, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 756876776627193158, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 756876776627193158, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.r
+      value: 0.68235296
+      objectReference: {fileID: 0}
     - target: {fileID: 1819021156952995601, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -319,6 +331,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3230936335862657162, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230936335862657162, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230936335862657162, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.r
+      value: 0.68235296
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555281833883447814, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555281833883447814, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555281833883447814, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.r
+      value: 0.68235296
+      objectReference: {fileID: 0}
     - target: {fileID: 3588943187376575689, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -334,6 +370,18 @@ PrefabInstance:
     - target: {fileID: 7307305545723153730, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: Score
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963007268866700106, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963007268866700106, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963007268866700106, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: m_Color.r
+      value: 0.68235296
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -749,7 +797,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -2050,7 +2098,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0

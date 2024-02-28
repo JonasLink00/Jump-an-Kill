@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 573485777, guid: f1307f0a4a1df734aace54188b9457a2, type: 3}
+    - target: {fileID: 579615811610415304, guid: f772064cb44a35d44b6bbea7eb56f115, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 12.82
+      objectReference: {fileID: 0}
     - target: {fileID: 945295303925656273, guid: f772064cb44a35d44b6bbea7eb56f115, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -307,6 +311,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 573485777, guid: f1307f0a4a1df734aace54188b9457a2, type: 3}
+    - target: {fileID: 1923066713785219594, guid: f772064cb44a35d44b6bbea7eb56f115, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 12.82
+      objectReference: {fileID: 0}
     - target: {fileID: 2008685836349686046, guid: f772064cb44a35d44b6bbea7eb56f115, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -535,6 +543,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 573485777, guid: f1307f0a4a1df734aace54188b9457a2, type: 3}
+    - target: {fileID: 7989513012138814642, guid: f772064cb44a35d44b6bbea7eb56f115, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 12.82
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -142,7 +142,7 @@ public class PlayerMovment : MonoBehaviour
             isGrounded = false;
 
             _animator.SetBool("jumping", true);
-            _sprite.color = Color.red;
+            _sprite.color = Color.yellow;
             //Verändert das Layer
             int AttackLayer = LayerMask.NameToLayer("Attack");
             gameObject.layer = AttackLayer;
