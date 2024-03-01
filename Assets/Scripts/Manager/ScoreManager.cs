@@ -23,6 +23,7 @@ public class ScoreManager : MonoBehaviour
     {
         instance = this;
         
+        // überprüft ob die aktuelle Szene das Tutorial ist
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
             transition.SetBool("Tutorial", true);

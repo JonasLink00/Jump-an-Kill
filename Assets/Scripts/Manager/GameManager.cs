@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
    public bool GameisPaused = false;
 
+    //stellt sicher das es nicht mehre als einen GameManager gibt 
     private void Awake()
     {
         if (Instance == null)
@@ -21,17 +22,6 @@ public class GameManager : MonoBehaviour
         }
 
     }
-   // public float GetPoints()
-   // {
-   //     return EnenmiestoKill;
-   // }
-   // public void ResetPoints()
-   // {
-   //     EnenmiestoKill = 10f;
-   // }
-   // public void AddPoints(float amount)
-   // {
-   //     EnenmiestoKill -= amount;
-   // }
+   
 
 }

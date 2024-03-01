@@ -24,11 +24,13 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField]
     private ParticleSystem EnemyExplosion;
 
+    //greift auf das PlayerMovment Script und die AudioSource zu
     private void Start()
     {
         Player = FindObjectOfType<PlayerMovment>();
         DestroyEnemySound = GetComponent<AudioSource>();
     }
+    //Bewegt den Gegner und Zerstört ihn wenn er außerhalb des Bildschirms ist
     private void Update()
     {
         
@@ -50,7 +52,7 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-
+    //Zerstört sich beim auslösen des Triggers selbst (mit sound und Partikel Explosion) 
     private void OnTriggerEnter2D(Collider2D other)
     {
         

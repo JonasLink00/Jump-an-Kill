@@ -18,6 +18,7 @@ public class EnemySpawnerLeft : MonoBehaviour
     {
         Spawn();
     }
+    //erstellt Gegner 
     private void Spawn()
     {
         //bool verhindert dauerSpawn der Enemies 
@@ -28,6 +29,7 @@ public class EnemySpawnerLeft : MonoBehaviour
         }
     }
 
+    //verhindert das mehrere Gegner gleichzeitig spawnen
     private IEnumerator SpawnEnemy()
     {
         _isEnemySpawed = true;

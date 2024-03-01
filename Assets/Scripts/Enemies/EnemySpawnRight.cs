@@ -20,11 +20,13 @@ public class EnemySpawnerRight : MonoBehaviour
 
     [SerializeField]
     int delay = 1200;
+    //erstellt spawn interval nach Delay
     private void Awake()
     {
         Thread.Sleep(delay);
         SetTimeUntilSpawn();
     }
+    //erstellt Gegner 
     private void Update()
     {
         spawnInterval -= Time.deltaTime;
@@ -35,6 +37,7 @@ public class EnemySpawnerRight : MonoBehaviour
             SetTimeUntilSpawn();
         }
     }
+    //setzt spawn interval
     private void SetTimeUntilSpawn()
     {
         spawnInterval = Random.Range(minispawntime, maxispawntime);

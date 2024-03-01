@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuButton : MonoBehaviour
 {
+    //legt fest was passiert wenn ein Button gedrückt wird (Läd entsprechenede Szene)
+
     public void PlayButton()
     {
         Szeneloader.Instance.UnLoadScene(SceneIndicies.PauseMenu);

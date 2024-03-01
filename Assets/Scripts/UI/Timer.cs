@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
     public static bool timerisstoped = false;
     private void Update()
     {
-
+        //Updated Timer und löst Event aus
         if (remainingTime > 0 && !timerisstoped)
         {
             remainingTime -= Time.deltaTime;
@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
             remainingTime = 0;
             timeisup.RaiseEvent();
         }
+        //legt fest wie der Timer aungezeigt wird
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);

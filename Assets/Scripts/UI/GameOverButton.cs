@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOverButton : MonoBehaviour
 {
+    //legt fest was passiert wenn ein Button gedrückt wird (Läd entsprechenede Szene)
+
     public void Restart()
     {
         //GameManager.Instance.ResetPoints();

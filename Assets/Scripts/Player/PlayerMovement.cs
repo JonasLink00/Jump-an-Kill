@@ -60,7 +60,7 @@ public class PlayerMovment : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-
+        //Steuert die Animationen 
         if(context.canceled)
         {
             _animator.SetBool("walking", false);
