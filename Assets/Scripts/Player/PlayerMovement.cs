@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PlayerMovment : MonoBehaviour
 {
@@ -22,16 +22,17 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField]
     private ParticleSystem JumpDust;
 
+    [Header("Gravity")]
+    public float baseGravity = 2;
+    public float maxFallSpeed = 18f;
+    public float fallSpeedMultiplier = 2f;
+
     [Header("GroundCheck")]
     public Transform groundCheckPos;
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     public LayerMask groundLayer;
     public bool isGrounded = false;
 
-    [Header("Gravity")]
-    public float baseGravity = 2;
-    public float maxFallSpeed = 18f;
-    public float fallSpeedMultiplier = 2f;
 
     
     public SpriteRenderer _sprite;
