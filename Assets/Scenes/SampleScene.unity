@@ -3321,6 +3321,10 @@ PrefabInstance:
       propertyPath: remainingTime
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 7307305545723153730, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
+      propertyPath: Score
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8963007268866700106, guid: 5efc14eb24d5ee34db5f5c75e1132399, type: 3}
       propertyPath: m_Color.b
       value: 1
