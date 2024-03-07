@@ -1021,6 +1021,8 @@ MonoBehaviour:
   timerText: {fileID: 7958073204536498852}
   remainingTime: 6
   timeisup: {fileID: 11400000, guid: 77a30e23ea6103941b561c32485ddaba, type: 2}
+  transition: {fileID: 5924914538894206362}
+  transitionTimer: 1
 --- !u!1 &7922612293577964658
 GameObject:
   m_ObjectHideFlags: 0
