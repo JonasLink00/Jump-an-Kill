@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
-namespace Assets.Scripts.UI
-{
-    public class Countdowntimer
+
+
+    public class Countdowntimer: MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI timerText;
         [SerializeField] float remainingTime;
         [SerializeField] private ScriptableEvent timeisup;
 
         public static bool timerisstoped = false;
-        private void Update()
+        public void ShowCountdown()
         {
             //Updated Timer und löst Event aus
             if (remainingTime > 0 && !timerisstoped)
@@ -25,8 +25,8 @@ namespace Assets.Scripts.UI
             }
             else if (remainingTime < 0)
             {
-                remainingTime = 0;
                 timeisup.RaiseEvent();
+                remainingTime = 0;
             }
             //legt fest wie der Timer angezeigt wird
             //int minutes = Mathf.FloorToInt(remainingTime / 60);
@@ -34,4 +34,4 @@ namespace Assets.Scripts.UI
             timerText.text = string.Format("{00}", seconds);
         }
     }
-}
+

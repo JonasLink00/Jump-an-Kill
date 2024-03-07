@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,19 +10,29 @@ public class Timer : MonoBehaviour
     [SerializeField] float remainingTime;
     [SerializeField] private ScriptableEvent timeisup;
 
+    [SerializeField]
+    private ScriptableEvent ShowCountdown;
+    [SerializeField]
+    private ScriptableEvent StopTimer;
     public static bool timerisstoped = false;
+    public Countdowntimer Countdown;
+
+    [SerializeField]
+    Animator _animator;
     private void Update()
     {
         //Updated Timer und löst Event aus
-        if (remainingTime > 0 && !timerisstoped)
+        if (remainingTime > 6 && !timerisstoped)
         {
             remainingTime -= Time.deltaTime;
            
         }
-        else if (remainingTime < 0)
+        else if (remainingTime < 6)
         {
-            remainingTime = 0;
-            timeisup.RaiseEvent();
+            Debug.Log("Countdown");
+            ShowCountdown.RaiseEvent();
+            Animatetimer();
+            Countdown.ShowCountdown();
         }
         //legt fest wie der Timer angezeigt wird
         int minutes = Mathf.FloorToInt(remainingTime / 60);
@@ -29,6 +40,9 @@ public class Timer : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
     
-    
+    public void Animatetimer()
+    {
+        _animator.SetBool("Countdown", true);
+    }
 
 }
