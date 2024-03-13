@@ -3484,6 +3484,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3590432782835505773, guid: fb0370813b79a82478fb2bbc80ada5d3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748851060600015672, guid: fb0370813b79a82478fb2bbc80ada5d3, type: 3}
+      propertyPath: jumpPower
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748851060600015672, guid: fb0370813b79a82478fb2bbc80ada5d3, type: 3}
+      propertyPath: groundCheckSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892567493500806036, guid: fb0370813b79a82478fb2bbc80ada5d3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5542591265886479203, guid: fb0370813b79a82478fb2bbc80ada5d3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3551,7 +3567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2913206773417428932, guid: 6242a3a626c8dd1478f8c5a6887b8d11, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5668713142361999854, guid: 6242a3a626c8dd1478f8c5a6887b8d11, type: 3}
       propertyPath: m_LocalPosition.x

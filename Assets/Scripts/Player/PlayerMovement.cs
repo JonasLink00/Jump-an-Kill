@@ -16,8 +16,9 @@ public class PlayerMovment : MonoBehaviour
     [Header("Jumping")]
     public float jumpPower = 10f;
     public int maxJumps = 2;
-    int jumpsRemaning;
-    public bool isJumping = false;
+    public int jumpsRemaning;
+    bool pressedJump = false;
+    public bool secondJump = false;
     AudioSource jumpSound;
     [SerializeField]
     private ParticleSystem JumpDust;
@@ -54,6 +55,7 @@ public class PlayerMovment : MonoBehaviour
         
         rb.velocity = new Vector2(horizontalMovement * PlayerSpeed, rb.velocity.y);
         GroundCheck();
+        ManageJump();
         Gravity();
         Flip();
         
@@ -95,65 +97,84 @@ public class PlayerMovment : MonoBehaviour
    
     public void Jump(InputAction.CallbackContext context)
     {
-        if (jumpsRemaning > 0)
+        if (jumpsRemaning <= 0) return;
+
+        if (context.performed)
         {
-            isJumping = true;
-
-            
-
-            //Performed = Komplet gedrückt = 1 Jump
-            if (context.performed)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-                jumpsRemaning--;
-                jumpSound.Play();
-                JumpDust.Play();
-
-            }
-            //Canceld = nicht Komplet gedrückt = 0,5 Jump
-            else if (context.canceled)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-                jumpsRemaning--;
-                
-            }
-
-
+           pressedJump = true;
         }
+        else
+        {
+            pressedJump = false;
+        }
+        
     }
     private void GroundCheck()
     {
         if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer))
         {
-            jumpsRemaning = maxJumps;
+            
             isGrounded = true;
-            isJumping = false;
-            _animator.SetBool("jumping", false);
-            _sprite.color = Color.white;
-
-
-            //Verändert das Layer
-            int PlayerLayer = LayerMask.NameToLayer("Player");
-            gameObject.layer = PlayerLayer;
-            //Debug.Log("Current layer:" + gameObject.layer);
+            secondJump = false;
+            
+            Debug.Log("Grounded");
+           
         }
-        else if (isJumping)
+        else
         {
+            Debug.Log("notGrounded");
 
             isGrounded = false;
-
-            _animator.SetBool("jumping", true);
-            _sprite.color = Color.yellow;
-            //Verändert das Layer
-            int AttackLayer = LayerMask.NameToLayer("Attack");
-            gameObject.layer = AttackLayer;
-            //Debug.Log("Current layer:" + gameObject.layer);
-
         }
 
     }
     
-    
+    private void JumpReset()
+    {
+        jumpsRemaning = maxJumps;
+        _animator.SetBool("jumping", false);
+        _sprite.color = Color.white;
+    }
+
+    private void SetJumpAnimation()
+    {
+        _animator.SetBool("jumping", true);
+        _sprite.color = Color.yellow;
+    }
+
+    private void ManageJump()
+    {
+        if(pressedJump)
+        {
+            SetJumpAnimation();
+
+            if (!secondJump)
+            {
+                Debug.Log("JUmp1");
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+                jumpsRemaning--;
+                jumpSound.Play();
+                JumpDust.Play();
+                secondJump = true;
+
+            }
+            else if (secondJump)
+            {
+                Debug.Log("JUmp2");
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower * 1.2f);
+                jumpsRemaning--;
+                jumpSound.Play();
+                JumpDust.Play();
+                secondJump = false;
+            }
+        }
+        else
+        {
+            Debug.Log("JumpReset");
+            JumpReset();
+           
+        }
+    }
     private void Flip()
     {
         //Spieler guckt in Richtung der Bewegung

@@ -56,7 +56,7 @@ public class EnemyBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         
-        if (other.GetComponent<Rigidbody2D>() != null && Player.isJumping)
+        if (other.GetComponent<Rigidbody2D>() != null && !Player.isGrounded)
         {
             StopCoroutine(DestroyEnemy());
             StartCoroutine(DestroyEnemy());
