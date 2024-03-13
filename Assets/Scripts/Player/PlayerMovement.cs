@@ -15,9 +15,10 @@ public class PlayerMovment : MonoBehaviour
 
     [Header("Jumping")]
     public float jumpPower = 10f;
+    public float addjumpPower = 1.2f;
     public int maxJumps = 2;
     public int jumpsRemaning;
-    bool pressedJump = false;
+    bool performJump = false;
     public bool secondJump = false;
     AudioSource jumpSound;
     [SerializeField]
@@ -97,26 +98,25 @@ public class PlayerMovment : MonoBehaviour
    
     public void Jump(InputAction.CallbackContext context)
     {
-        if (jumpsRemaning <= 0) return;
-
+       
         if (context.performed)
         {
-           pressedJump = true;
+           performJump = true;
         }
-        else
-        {
-            pressedJump = false;
-        }
+     
         
     }
     private void GroundCheck()
     {
+        isGrounded = false;
+        if (rb.velocity.y > 0.01f) return;
+
         if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer))
         {
             
             isGrounded = true;
             secondJump = false;
-            
+            jumpsRemaning = maxJumps;
             Debug.Log("Grounded");
            
         }
@@ -131,7 +131,7 @@ public class PlayerMovment : MonoBehaviour
     
     private void JumpReset()
     {
-        jumpsRemaning = maxJumps;
+        
         _animator.SetBool("jumping", false);
         _sprite.color = Color.white;
     }
@@ -144,15 +144,17 @@ public class PlayerMovment : MonoBehaviour
 
     private void ManageJump()
     {
-        if(pressedJump)
+        
+        if (performJump)
         {
+            performJump = false;
             SetJumpAnimation();
+            if (jumpsRemaning <= 0) return;
 
             if (!secondJump)
             {
                 Debug.Log("JUmp1");
-                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-                jumpsRemaning--;
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower*addjumpPower);
                 jumpSound.Play();
                 JumpDust.Play();
                 secondJump = true;
@@ -161,19 +163,22 @@ public class PlayerMovment : MonoBehaviour
             else if (secondJump)
             {
                 Debug.Log("JUmp2");
-                rb.velocity = new Vector2(rb.velocity.x, jumpPower * 1.2f);
-                jumpsRemaning--;
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+                
                 jumpSound.Play();
                 JumpDust.Play();
                 secondJump = false;
             }
+            jumpsRemaning--;
+           
         }
-        else
+        else if (isGrounded)
         {
             Debug.Log("JumpReset");
             JumpReset();
-           
+
         }
+
     }
     private void Flip()
     {
