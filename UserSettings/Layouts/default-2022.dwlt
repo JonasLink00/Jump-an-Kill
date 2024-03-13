@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 976
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 108
+  controlID: 133
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -391,9 +391,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5a760000
-      m_LastClickedID: 30298
-      m_ExpandedIDs: ecedffff30eeffff74f0ffff90f0fffff2f0ffff10f1ffffecf1ffffbaf2ffff80f3ffff70f4ffffa0f4ffffc4f7fffff6f7ffffc2faffff
+      m_SelectedIDs: 44faffff
+      m_LastClickedID: -1468
+      m_ExpandedIDs: e8faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -864,9 +864,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.36, y: -2.92025, z: 0}
+    m_Target: {x: -7.622314, y: -2.9281614, z: 0.0031167457}
     speed: 2
-    m_Value: {x: -8.359997, y: -2.920248, z: -1.4118733e-10}
+    m_Value: {x: -8.36, y: -2.92025, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -916,9 +916,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.6570654
+    m_Target: 1.7485057
     speed: 2
-    m_Value: 0.6570695
+    m_Value: 0.6570654
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1289,9 +1289,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 23}
-    m_SelectedIDs: fc6e0000
-    m_LastClickedID: 28412
-    m_ExpandedIDs: 00000000c66b0000c86b000000ca9a3b
+    m_SelectedIDs: 746e0000
+    m_LastClickedID: 28276
+    m_ExpandedIDs: 00000000466b0000486b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1319,7 +1319,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c66b0000c86b0000
+    m_ExpandedIDs: 00000000466b0000486b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000347c000014720000f2760000d48b0000b2680000c268000088690000aa6600008a690000b4660000fa690000da840000086a00004c6a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
