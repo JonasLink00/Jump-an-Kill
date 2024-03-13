@@ -15,7 +15,7 @@ public class PlayerMovment : MonoBehaviour
 
     [Header("Jumping")]
     public float jumpPower = 10f;
-    public float addjumpPower = 1.2f;
+    public float JumpMultiplier = 1.2f;
     public int maxJumps = 2;
     public int jumpsRemaning;
     bool performJump = false;
@@ -154,7 +154,7 @@ public class PlayerMovment : MonoBehaviour
             if (!secondJump)
             {
                 Debug.Log("JUmp1");
-                rb.velocity = new Vector2(rb.velocity.x, jumpPower*addjumpPower);
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower*JumpMultiplier);
                 jumpSound.Play();
                 JumpDust.Play();
                 secondJump = true;
